@@ -8,11 +8,11 @@ section {
     padding: 10px;
 }
 
-.data-list > .data {
+.data-list .data {
     display: flex;
 }
 
-.data-list > .data input {
+.data-list .data input {
     width: 50px;
     margin: 10px 2px;
 }
