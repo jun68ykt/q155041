@@ -38,11 +38,8 @@ $(function(){
   });
 
   $('#remove').click(function(){
-    if( ($('.data2').css('display')=='flex') && ($('.data3').css('display')=='flex') ){
-      $('.data3').css('display','none');
-    }
-    else if( ($('.data2').css('display')=='flex') && ($('.data3').css('display')=='none') ){
-      $('.data2').css('display','none');
-    }
+    // データ行が2行以上あれば最後の行を削除
+    if ($('.data').length > 1)
+      $('.data:last-child').remove();
   });
 });
