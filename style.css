@@ -22,13 +22,10 @@ section{
     margin: 15px 0 0 0;
     padding: 10px;
 }
-.datalist > div:first-of-type {
+.datalist > .data {
     display: flex;
 }
-.datalist > div:not(:first-of-type) {
-    display: none;
-}
-.datalist > div input {
+.datalist > .data input {
     width: 50px;
     margin: 10px 2px;
 }
