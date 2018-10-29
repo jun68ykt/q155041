@@ -22,10 +22,10 @@ section{
     margin: 15px 0 0 0;
     padding: 10px;
 }
-.datalist > .data {
+.data-list > .data {
     display: flex;
 }
-.datalist > .data input {
+.data-list > .data input {
     width: 50px;
     margin: 10px 2px;
 }
