@@ -27,12 +27,14 @@ $(function(){
   */
 
   $('#add').click(function(){
-    if( ($('.data2').css('display')=='none') && ($('.data3').css('display')=='none') ){
-      $('.data2').css('display','flex');
-    }
-    else if( ($('.data2').css('display')=='flex') && ($('.data3').css('display')=='none') ){
-      $('.data3').css('display','flex');
-    }
+    // 一行目をクローン
+    const newData = $('.data:first-of-type').clone();
+
+    // input の値を初期化
+    $('input', newData).val('');
+
+    // data-table に追加
+    $('.data-table').append(newData);
   });
 
   $('#remove').click(function(){
