@@ -1,22 +1,21 @@
 $(function(){
   /*
   【入力エリア】を【送信エリア】にコピー
-  （実際には多くの値があるので、このような書き方ではない方法を知りたいです）
   */
-
-  const inputData = function() {
-    const clazz = $(this).attr('class');
+  const updateResult = function(clazz) {
     const values = $(`.${clazz}`).toArray().map(e => e.value);
     $(`#result-${clazz}`).val(values.join(','));
+  };
+
+  const inputData = function() {
+    updateResult($(this).attr('class'));
   };
 
   $('.data input').on('keyup change', inputData);
 
   /*
   ボタンクリックで【入力エリア】の追加と削除
-  （実際には多くの値があるので、このような書き方ではない方法を知りたいです）
   */
-
   $('#add').click(function(){
     // 一行目をクローン
     const newData = $('.data:first-of-type').clone();
@@ -31,8 +30,10 @@ $(function(){
   });
 
   $('#remove').click(function(){
-    // データ行が2行以上あれば最後の行を削除
-    if ($('.data').length > 1)
+    // データ行が2行以上あれば最後の行を削除し、送信エリアを更新
+    if ($('.data').length > 1) {
       $('.data:last-child').remove();
+      ['name', 'valu'].forEach(clazz => updateResult(clazz));
+    }
   });
 });
