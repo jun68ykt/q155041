@@ -1,0 +1,34 @@
+p {
+    margin: 0px;
+}
+.kinou {
+    background: khaki;
+    padding: 5px;
+}
+.sitsumon {
+    background: pink;
+    padding: 5px;
+}
+span {
+    background: white;
+    font-size: 0.8em;
+    padding: 0.2em;
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+section{
+    border: 1px solid gray;
+    margin: 15px 0 0 0;
+    padding: 10px;
+}
+.datalist > div:first-of-type {
+    display: flex;
+}
+.datalist > div:not(:first-of-type) {
+    display: none;
+}
+.datalist > div input {
+    width: 50px;
+    margin: 10px 2px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Q155041</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="kinou"><span>機能</span>【入力エリア】の入力値を、【送信エリア】にカンマ区切りでコピーします。（placeholderのようなイメージ）</p>
+
+<p class="sitsumon"><span>質問</span>➀今は３個ずつですが実際は入力ボックスの数は多いので、現状のJSのような書き方でなく、多くても対応できるような書き方を知りたいです。<br>➁送信エリアにコピーする際、値２つにつきカンマを１つにしたいです。
+</p>
+
+<section class="datalist">
+    <p>【入力エリア】</p>
+    <div class="data1">
+        <input id="name1" class="name" type="textarea" placeholder="りんご">
+        <input id="valu1" class="valu" type="number" placeholder="3">
+    </div>
+    <div class="data2">
+        <input id="name2" class="name" type="textarea" placeholder="なす">
+        <input id="valu2" class="valu" type="number" placeholder="2">
+    </div>
+    <div class="data3">
+        <input id="name3" class="name" type="textarea">
+        <input id="valu3" class="valu" type="number">
+    </div>
+    <!-- 同様に多くのdataがある -->
+    <button type="button" id="add">add data</button>
+    <button type="button" id="remove">remove data</button>
+</section>
+
+<section class="outputlist">
+    <p>【送信エリア】</p>
+    <input id="result_name" placeholder="りんご,なす">
+    <input id="result_valu" placeholder="3,2">
+</section>
+</body>
+</html>
