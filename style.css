@@ -29,3 +29,7 @@ section{
     width: 50px;
     margin: 10px 2px;
 }
+
+.output-list input {
+    width: 95%;
+}
