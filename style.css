@@ -21,4 +21,4 @@ section {
     width: 95%;
 }
 
-input[disabled] { background-color: #aaa; }
+button[disabled] { background-color: #aaa; }
