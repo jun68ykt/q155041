@@ -9,7 +9,10 @@ $(function(){
     // 末尾にカンマが1個以上あるとき、これを削除
     csv = csv.replace(/,+$/, '');
 
-    $(`#result-${clazz}`).val(csv);
+    // 上記で作成されたカンマ区切りの文字列をvalueに設定し、あわせて連続したカンマがあるかどうかでdisabledを設定
+    $(`#result-${clazz}`)
+      .val(csv)
+      .prop('disabled', /,,/.test(csv));
   };
 
   const inputData = function() {
