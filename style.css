@@ -20,3 +20,5 @@ section {
 .output-list input {
     width: 95%;
 }
+
+button[disabled] { background-color: #aaa; }
