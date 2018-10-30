@@ -3,8 +3,13 @@ $(function(){
   【入力エリア】を【送信エリア】にコピー
   */
   const updateResult = function(clazz) {
-    const values = $(`.${clazz}`).toArray().map(e => e.value);
-    $(`#result-${clazz}`).val(values.join(','));
+    // 指定されたクラスの input.value をカンマ区切りにした文字列を作成
+    let csv = $(`.${clazz}`).toArray().map(e => e.value).join(',');
+
+    // 末尾にカンマが1個以上あるとき、これを削除
+    csv = csv.replace(/,+$/, '');
+
+    $(`#result-${clazz}`).val(csv);
   };
 
   const inputData = function() {
